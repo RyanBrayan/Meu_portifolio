@@ -245,13 +245,22 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   position: relative;
 }
-
+#hero::after{
+  content: '';
+  width: 600px;
+  height: 1px;
+  left: 33.5%;
+  bottom: 0;
+  background-color: #07090b;
+  position: absolute ;
+}
 @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
   }
   
 }
+
 #hero:before {
   content: "";
   position: absolute;
@@ -280,6 +289,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .social-links {
   margin-top: 30px;
 }
+
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
@@ -290,6 +300,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .social-links a:hover {
   color: #0563bb;
+  
 }
 #hero img{
   right: 0;
@@ -297,10 +308,14 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   z-index: -1;
 }
+
+#hero i{
+  font-size: 35px;
+}
 @media (max-width: 992px) {
   #hero {
     text-align: center;
-  background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
 
   }
   #hero h1 {
@@ -312,7 +327,27 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
     line-height: 24px;
   }
-
+  #hero img{
+    display: flex;
+    
+    
+    position: absolute;
+    z-index: -1;
+  }
+  #hero .social-links::after{
+    content: '';
+  width: 600px;
+  height: 1px;
+  left: 0;
+  top: 300%;
+  background-color: #07090b;
+  position: absolute ;
+  }
+  #hero::after{
+    content: '';
+    width: 0;
+    height: 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -326,6 +361,15 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 30px;
+}
+.section-title::before{
+  content: '';
+  width: 600px;
+  height: 1px;
+  top: -15%;
+  left: 27%;
+  background-color: #050505;
+  position: absolute;
 }
 .section-title h2 {
   font-size: 32px;
